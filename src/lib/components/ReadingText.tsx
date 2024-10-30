@@ -10,7 +10,6 @@ import { useGaugeContext } from '../hooks/useGaugeContext';
 import { useLevelDimensions } from '../hooks/useLevelDimensions';
 import {
   checkLowBattery,
-  getValueInPercentage,
   getVisibleCellsCount,
 } from '../utils';
 import type { FormatValue } from '../../typings';
