@@ -36,7 +36,7 @@ export const ReadingText = (props: ReadingTextProps) => {
   const { lowBatteryValue, noOfCells, interCellsGap } =
     customization[BATTERY_METER];
   const percentageSign = showPercentage ? '%' : '';
-  const metricSign = metric ? metric : '';
+  const metricSign = metric;
   const valueRatio = value;
   const isCellTypeBattery = noOfCells > 1;
   const noOfVisibleCells = getVisibleCellsCount(value, maxValue, noOfCells);
