@@ -28,6 +28,7 @@ export type TGaugeCustom = {
     fontFamily: string;
     fontSize: number;
     showPercentage: boolean;
+    metric: string;
   };
   chargingFlash: SVGProps<SVGPathElement> & {
     scale?: number;
