@@ -29,18 +29,20 @@ export const ReadingText = (props: ReadingTextProps) => {
     lightContrastColor,
     lowBatteryColor,
     showPercentage,
+    metric,
     fontSize,
     ...otherTextProps
   } = customization[READING_TEXT];
   const { lowBatteryValue, noOfCells, interCellsGap } =
     customization[BATTERY_METER];
   const percentageSign = showPercentage ? '%' : '';
-  const valueRatio = value / maxValue;
+  const metricSign = metric ? metric : '';
+  const valueRatio = value;
   const isCellTypeBattery = noOfCells > 1;
   const noOfVisibleCells = getVisibleCellsCount(value, maxValue, noOfCells);
   const noOfInvisibleCells = noOfCells - noOfVisibleCells;
   const widthPerCell = width / noOfCells;
-  const readingValue = getValueInPercentage(value, maxValue);
+  const readingValue = value;
 
   const renderTextElement = (contrastColor: string, clipPathId: string) => {
     return (
@@ -62,7 +64,7 @@ export const ReadingText = (props: ReadingTextProps) => {
         writingMode={orientation === 'vertical' ? 'tb' : 'lr'}
         {...otherTextProps}
       >
-        {formatValue(readingValue) + percentageSign}
+        {formatValue(readingValue) + percentageSign + metricSign}
       </text>
     );
   };
