@@ -43,6 +43,7 @@ export const defaultState = {
       fontFamily: 'Helvetica',
       fontSize: 14,
       showPercentage: true,
+      metric: ''
     },
     chargingFlash: {
       scale: undefined,
